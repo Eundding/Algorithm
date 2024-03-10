@@ -1,7 +1,9 @@
 n = int(input())
-answer = 1
+l = list(range(1, n+1))
 
-while answer <= n:
-  answer *= 2
-
-print(answer//2)
+while len(l) != 1:
+    l2 = []
+    for i in range(1, len(l), 2):
+        l2.append(l[i])
+    l = l2
+print(l[0])

@@ -13,15 +13,14 @@ INF = float("INF")
 def dist(c):
     b = 0
     for i in range(n):
-        a = 100000 #INF
+        a = INF
         for j in c:
             temp = abs(x[i] - x[j]) + abs(y[i] - y[j])
             a = min(a, temp)
         b = max(b, a)
     return b
 comb = list(combinations(range(n), k))
-# answer = INF
-answer = 100000
+answer = INF
 for c in comb:
     answer = min(answer, dist(c))
 

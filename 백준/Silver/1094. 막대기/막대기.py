@@ -1,11 +1,6 @@
 X = int(input())
-bar = 64
-current = 0
-cnt = 1
-while True:
-    if bar + current <= X: break
-    bar = bar >> 1 # bar //= 2
-    if bar + current < X:
-        current += bar
+cnt = 0
+for i in range(7):
+    if X & (1<<i):
         cnt += 1
 print(cnt)

@@ -16,7 +16,7 @@ def bfs(maps, n, m):
             if nx < 0 or nx >= n or ny < 0 or ny >= m: # 범위 밖
                 continue
                 
-            if maps[nx][ny] == 1 and (graph[nx][ny] == -1 or graph[nx][ny] > graph[x][y]+1): 
+            if maps[nx][ny] == 1 and graph[nx][ny] == -1: 
                 graph[nx][ny] = graph[x][y] + 1
                 queue.append([nx, ny])
             elif nx == n-1 and ny == m-1: # 도착 지점
